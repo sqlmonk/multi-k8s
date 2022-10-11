@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+    name: zaikedaar-com-tls
+spec:
+    secretName: zaikedaar-com
+    issuerRef:
+        name: letsencrypt-prod
+        kind: ClusterIssuer
+    commonName: zaikedaar.com
+    dnsNames:
+        - zaikedaar.com
+        - www.zaikedaar.com
